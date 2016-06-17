@@ -1,0 +1,19 @@
+{
+    "name": "ramonztro/simple-scraper",
+    "type": "library",
+    "description": "SimpleScraper allows you to fetch Open Graph Protocol data, Twitter Card data and/or meta tags data.",
+    "homepage": "https://github.com/ramonztro/simple-scraper/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramon Kayo",
+            "email": "contato@ramonkayo.com",
+            "homepage": "http://ramonkayo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ramonztro\\SimpleScraper\\": "src/"
+        }
+    }
+}
