@@ -4,6 +4,10 @@ SimpleScraper allows you to fetch Open Graph Protocol data, Twitter Card data an
 
 ## Basic Usage
 
+### Requirements
+
+- PHP 5.3 or higher.
+
 ### Installation
 
 Install the latest version with:
@@ -69,10 +73,6 @@ try {
 ```
 
 ## About
-
-### Requirements
-
-- PHP 5.3 or higher.
 
 ### MIT License
 
