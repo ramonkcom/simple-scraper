@@ -19,4 +19,15 @@ class SimpleScraperTest extends TestCase{
     {
         $ss = new SimpleScraper('');
     }
+
+    /**
+     * This site was originally throwing errors, changes to
+     * headers seems to fix it.
+     */
+    public function testHubspotUrl()
+    {
+        $ss = new SimpleScraper ('https://blog.hubspot.com/marketing/facebook-pixel');
+        $this->assertInstanceOf(SimpleScraper::class, $ss);
+    }
+
 }
