@@ -26,7 +26,6 @@ class SimpleScraper {
 		$content,
 		$httpCode,
 		$url;
-	
 /*===========================================================================*/
 // CONSTRUCTOR
 /*===========================================================================*/
@@ -35,7 +34,7 @@ class SimpleScraper {
 	 * @param string $url
 	 * @throws Exception
 	 */
-	public function __construct($url) {
+	public function __construct($url, $userAgent ='') {
 		$this->data = array(
 			'ogp' => array(),
 			'twitter' => array(),
@@ -48,7 +47,11 @@ class SimpleScraper {
 		if (!(preg_match($urlPattern, $url)))
 			throw new InvalidArgumentException("Argument 'url' is invalid.");
 		$this->url = $url;
-		
+		if (empty($userAgent))
+			$this->userAgent = 'Mozilla/5.0 (compatible; SimpleScraper)';
+		else
+			$this->userAgent = $userAgent;
+
 		$this->fetchResource();
 		libxml_use_internal_errors(true);
 		$dom = new DOMDocument(null, 'UTF-8');
@@ -143,7 +146,7 @@ class SimpleScraper {
 /*===========================================================================*/
 	private function fetchResource() {
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (compatible; SimpleScraper)');
+		curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
 		curl_setopt($ch, CURLOPT_URL, $this->url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
