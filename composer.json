@@ -15,5 +15,13 @@
         "psr-4": {
             "Ramonztro\\SimpleScraper\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ramonztro\\SimpleScraper\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
     }
 }
