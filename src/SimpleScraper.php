@@ -52,7 +52,7 @@ class SimpleScraper {
 		else
 			$this->userAgent = $userAgent;
 		if (!empty($proxy))
-			$this->proxy = $proxy
+			$this->proxy = $proxy;
 
 		$this->fetchResource();
 		libxml_use_internal_errors(true);
