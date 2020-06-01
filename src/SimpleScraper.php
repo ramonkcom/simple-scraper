@@ -34,7 +34,7 @@ class SimpleScraper {
 	 * @param string $url
 	 * @throws Exception
 	 */
-	public function __construct($url, $userAgent ='') {
+	public function __construct($url, $userAgent ='', $proxy = '') {
 		$this->data = array(
 			'ogp' => array(),
 			'twitter' => array(),
@@ -51,6 +51,8 @@ class SimpleScraper {
 			$this->userAgent = 'Mozilla/5.0 (compatible; SimpleScraper)';
 		else
 			$this->userAgent = $userAgent;
+		if (!empty($proxy))
+			$this->proxy = $proxy;
 
 		$this->fetchResource();
 		libxml_use_internal_errors(true);
@@ -152,6 +154,8 @@ class SimpleScraper {
 		];
 		
 		$ch = curl_init();
+		if( isset( $this->proxy ) )
+			curl_setopt($ch, CURLOPT_PROXY, $this->proxy);
 		curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
 		curl_setopt($ch, CURLOPT_URL, $this->url);
 		curl_setopt($ch, CURLOPT_TCP_NODELAY, true);
