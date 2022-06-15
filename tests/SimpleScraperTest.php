@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ramonztro\SimpleScraper;
+namespace RamonK\SimpleScraper;
 
 use PHPUnit\Framework\TestCase;
 
