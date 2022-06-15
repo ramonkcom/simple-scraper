@@ -1,5 +1,5 @@
 {
-    "name": "ramonztro/simple-scraper",
+    "name": "ramonkcom/simple-scraper",
     "type": "library",
     "description": "SimpleScraper allows you to fetch Open Graph Protocol data, Twitter Card data and/or meta tags data.",
     "homepage": "https://github.com/ramonkcom/simple-scraper/",
@@ -13,12 +13,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ramonztro\\SimpleScraper\\": "src/"
+            "RamonK\\SimpleScraper\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ramonztro\\SimpleScraper\\": "tests/"
+            "RamonK\\SimpleScraper\\": "tests/"
         }
     },
     "require-dev": {
