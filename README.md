@@ -13,7 +13,7 @@ SimpleScraper allows you to fetch Open Graph Protocol data, Twitter Card data an
 Install the latest version with:
 
 ```bash
-$ composer require ramonztro/simple-scraper
+$ composer require ramonkcom/simple-scraper
 ```
 
 ### Basic Usage
@@ -21,11 +21,11 @@ $ composer require ramonztro/simple-scraper
 ```php
 <?php
 
-use Ramonztro\SimpleScraper\SimpleScraper;
+use RamonK\SimpleScraper\SimpleScraper;
 
 try {
 	//Creates a scraper
-	$scraper = new SimpleScraper('http://localhost/~ramonztro/simple-scraper/doscrape.php?url=https://techcrunch.com/2016/06/16/neural-networks-artificial-intelligence-and-our-future/');
+	$scraper = new SimpleScraper('http://localhost/~ramonkcom/simple-scraper/doscrape.php?url=https://techcrunch.com/2016/06/16/neural-networks-artificial-intelligence-and-our-future/');
 	
 	//Returns an array containing OGP meta values. The array is indexed by the property attribute of the meta tag. In this case:
 	/* 
