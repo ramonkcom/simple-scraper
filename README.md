@@ -13,7 +13,7 @@ SimpleScraper allows you to fetch Open Graph Protocol data, Twitter Card data an
 Install the latest version with:
 
 ```bash
-$ composer require ramonkcom/simple-scraper
+$ composer require ramonztro/simple-scraper
 ```
 
 ### Basic Usage
