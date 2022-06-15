@@ -7,12 +7,12 @@
 | Author        : Ramon Kayo                                                |
 | Email         : contato@ramonkayo.com                                     |
 | License       : Distributed under the MIT License                         |
-| Full license  : https://github.com/ramonztro/simple-scraper               |
+| Full license  : https://github.com/ramonkcom/simple-scraper               |
 +---------------------------------------------------------------------------+
 | "Simplicity is the ultimate sophistication." - Leonardo Da Vinci          |
 +---------------------------------------------------------------------------+
 */
-namespace Ramonztro\SimpleScraper;
+namespace RamonK\SimpleScraper;
 
 use \DOMDocument;
 use \Exception;
